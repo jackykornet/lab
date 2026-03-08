@@ -16,11 +16,6 @@ spec:
     spec:
       containers:
         - image: httpd:alpine3.18
-          name: httpdi
-          command: ["/bin/bash", "-c"]
-          args: ["sleep 5; exit 1"]
+          name: httpd
   strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 1
-      maxSurge: 1
+    type: Recreate
