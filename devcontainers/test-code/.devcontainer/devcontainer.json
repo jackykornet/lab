@@ -1,13 +1,7 @@
 {
-	"name": "Python 3",
-	"image": "mcr.microsoft.com/devcontainers/python:3.14",
-	"features": {
-		"ghcr.io/devcontainers/features/azure-cli:1": {},
-		"ghcr.io/devcontainers/features/github-cli:1": {}
-	},
-
-	"remoteEnv": {
-		"MY_VARIABLE": "Jacky"
-	},
-  "postCreateCommand": "git config --global user.name 'Jacky Kornet' && git config --global user.email 'jacky.kornet@gmail.com'"
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile"
+  },
+   "postCreateCommand": "scripts/setup"
 }
